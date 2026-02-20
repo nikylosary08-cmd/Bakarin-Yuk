@@ -1,51 +1,278 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bakarin Yuk</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="Bakarin Yuk" content="width=device-width, initial-scale=1.0">
+<title>Bakarannya Juara, Rasanya Luar Biasa</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    scroll-behavior:smooth;
+    background:#fff;
+}
+
+/* NAVBAR */
+nav{
+    background:linear-gradient(90deg,#ff512f,#dd2476);
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    z-index:1000;
+}
+
+nav h2{
+    color:white;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    opacity:0.7;
+}
+
+/* HOME */
+#home{
+    height:100vh;
+    background:url("https://i.pinimg.com/736x/14/c4/55/14c4553dc9b57b069d63553ec1b3cd6d.jpg") no-repeat center/cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    background-blend-mode:overlay;
+    background-color:rgba(0,0,0,0.6);
+    padding:20px;
+}
+
+#home h1{
+    font-size:55px;
+    animation:fadeDown 1s ease;
+}
+
+#home p{
+    margin:15px 0;
+    font-size:20px;
+}
+
+/* SECTION */
+section{
+    padding:100px 50px;
+    text-align:center;
+}
+
+/* MENU */
+.menu-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    margin-top:40px;
+}
+
+.card{
+    width:260px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    overflow:hidden;
+    transform:translateY(50px);
+    opacity:0;
+    transition:all 0.6s ease;
+}
+
+.card.show{
+    transform:translateY(0);
+    opacity:1;
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:10px;
+    color:#ff512f;
+}
+
+.card p{
+    padding:0 10px 20px;
+    color:#555;
+}
+
+/* CONTACT */
+#contact{
+    background:linear-gradient(90deg,#ff512f,#dd2476);
+    color:white;
+}
+
+.contact-btn{
+    display:inline-block;
+    margin:10px;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    color:white;
+    background:#111;
+    transition:0.3s;
+}
+
+.contact-btn:hover{
+    background:white;
+    color:#111;
+}
+
+/* ALAMAT */
+#alamat{
+    background:#f4f4f4;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:white;
+    padding:20px;
+}
+
+/* WA FLOATING */
+.wa-float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    z-index:100;
+}
+
+.wa-float img{
+    width:35px;
+}
+
+/* ANIMATION */
+@keyframes fadeDown{
+    from{opacity:0; transform:translateY(-20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Bakarin Yuk</h1>
-        <div class="navbar">
-            <ul>
-                <li><a href="https://id.pinterest.com/pin/514395588711640832/">Home</a></li>
-                <li><a href="#">Menu</a></li> 
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="content">
-        <h1>BEST <span>QUALITY</span><br> INGREDIENTS</h1>
-        <a class="menu-color" href="#">View Menu</a>
-        <a href="#">Book Table</a>
-    </div>
 
-    <div class="spinner"></div>
+<!-- NAVBAR -->
+<nav>
+    <h2>Bakso Bakar 🔥</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#alamat">Alamat</a></li>
+    </ul>
+</nav>
 
-    <div class="content2">
-        <div class="https://id.pinterest.com/pin/624522673371861103/">
-            <h5>Bakso bakar Original</h5>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+<!-- HOME -->
+<section id="home">
+    <h1>Bakarin Yuk🔥</h1>
+    <p>Bakarannya Juara, Rasanya Luar Biasa!</p>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+    <h2>Menu Favorit 🍢</h2>
+    <div class="menu-container">
+
+        <div class="card">
+            <img src="https://id.pinterest.com/pin/90916486222894191/">
+            <h3>Original</h3>
+            <p>Bumbu manis gurih khas.</p>
         </div>
-        <div class="https://id.pinterest.com/pin/142918988170415456/">
-            <h5>Bakso bakar Level pedas (Level 1 sampai 5 sesuai selera kamu)</h5>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+        <div class="card">
+            <img src="https://id.pinterest.com/pin/142918988170415456/">
+            <h3>Pedas Level 1-5</h3>
+            <p>Pilih pedas sesuai selera.</p>
         </div>
-        <div class="https://id.pinterest.com/pin/514395588711710668/">
-            <h5>Bakso Mozzarella</h5>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+        <div class="card">
+            <img src="https://id.pinterest.com/pin/514395588711710668/">
+            <h3>Mozzarella</h3>
+            <p>Keju lumer bikin nagih!</p>
         </div>
+
     </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Order Sekarang 📲</h2>
+    <a href="https://wa.me/6281997341559?text=Halo,%20Bakarin%20Yuk,%20Saya%20mau%20pesan%20bakso%20bakar" 
+       target="_blank" class="contact-btn">
+       Chat WhatsApp
+    </a>
+</section>
+
+<!-- ALAMAT -->
+<section id="alamat">
+    <h2>Alamat Kami 📍</h2>
+    <p>Jl. Hang tuah Batu besar, Kec Nongsa No.72, Kota Batam</p>
+    <p>Buka Setiap Hari 15.00 - 21.00</p>
+</section>
+
+<footer>
+    © 2026 Bakarannya Juara, Rasanya Luar Biasa!
+</footer>
+
+<!-- FLOATING WA -->
+<a href="https://wa.me/6281997341559?text=Halo,%20Bakarin%20Yuk,%20Saya%20mau%20pesan%20bakso%20bakar" 
+   class="wa-float" target="_blank">
+   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
+
+<!-- SCRIPT ANIMASI SCROLL -->
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll',()=>{
+    const triggerBottom = window.innerHeight * 0.85;
+
+    cards.forEach(card=>{
+        const cardTop = card.getBoundingClientRect().top;
+
+        if(cardTop < triggerBottom){
+            card.classList.add('show');
+        }
+    });
+});
+</script>
+
 </body>
 </html>
-
-
- 
-
-
-
-
