@@ -1,119 +1,189 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bakarin Yuk</title>
-    <meta name="Bakarannya Juara, Rasanya Luar Biasa!" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            color: white;
-        }
-
-        /* Background Hero */
-        .hero {
-            background: url("https://i.pinimg.com/736x/1f/05/8c/1f058cafa173b9ab14d9dcdf7c5f25a2.jpg") no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-blend-mode: overlay;
-            background-color: rgba(0,0,0,0.6);
-        }
-
-        h1 {
-            font-size: 50px;
-            margin: 0;
-        }
-
-        p {
-            font-size: 20px;
-            margin: 10px 0;
-        }
-
-        .btn {
-            display: inline-block;
-            margin: 10px;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .wa {
-            background: #25D366;
-            color: white;
-        }
-
-        .wa:hover {
-            background: #1ebe5d;
-        }
-
-        .ig {
-            background: #E1306C;
-            color: white;
-        }
-
-        .ig:hover {
-            background: #c72a5c;
-        }
-
-        section {
-            padding: 60px 20px;
-            background: #ff5722;
-        }
-
-        .menu img {
-            width: 250px;
-            border-radius: 15px;
-            margin: 15px;
-        }
-
-        footer {
-            background: #222;
-            padding: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="hero">
-    <h1>Bakarin Yuk 🔥</h1>
-    <p>"Bakarannya Juara, Rasanya Luar Biasa!"</p>
-    <p>📍 Alamat: Jl. Hang tuah, Batu besar, Kec Nongsa No.72, Batam</p>
-
-    <!-- Tombol WhatsApp dengan pesan otomatis -->
-    <a href="https://wa.me/6281997341559?text=Halo,%20terima%20kasih%20sudah%20menghubungi%20Bakarin%20Yuk.%0ASilakan%20kirim%20pesanan%20Anda%20ya%20😊" 
-       class="btn wa" target="_blank">
-       Chat WhatsApp
-    </a>
-
-    <!-- Tombol Instagram -->
-    <a href="https://www.instagram.com/nky_lsry" 
-       class="btn ig" target="_blank">
-       Instagram
-    </a>
-</div>
-
-<section>
-    <h2>Menu Favorit 🍢</h2>
-    <div class="menu">
-        <img src="https://id.pinterest.com/pin/624522673371861103/" alt="Bakso Bakar ">
-        <img src="https://id.pinterest.com/pin/142918988170415456/" alt="Bakso Pedas">
-        <img src="https://id.pinterest.com/pin/514395588711710668/" alt="Bakso mozarella">
+    <div class="container">
+        <h1>Bakarin Yuk</h1>
+        <div class="navbar">
+            <ul>
+                <li><a href="https://id.pinterest.com/pin/514395588711640832/">Home</a></li>
+                <li><a href="#">Menu</a></li> 
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
     </div>
-    <p>✔ Level Pedas Bisa Pilih<br>
-       ✔ Harga Ramah Pelajar<br>
-       ✔ Dibakar Fresh Saat Dipesan</p>
-</section>
+    <div class="content">
+        <h1>BEST <span>QUALITY</span><br> INGREDIENTS</h1>
+        <a class="menu-color" href="#">View Menu</a>
+        <a href="#">Book Table</a>
+    </div>
 
-<footer>
-    © 2026 Bakarin Yuk. All rights reserved.
-</footer>
+    <div class="spinner"></div>
 
+    <div class="content2">
+        <div class="https://id.pinterest.com/pin/624522673371861103/">
+            <h5>Bakso bakar Original</h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="https://id.pinterest.com/pin/142918988170415456/">
+            <h5>Bakso bakar Level pedas (Level 1 sampai 5 sesuai selera kamu)</h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="https://id.pinterest.com/pin/514395588711710668/">
+            <h5>Bakso Mozzarella</h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
 </body>
 </html>
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background: rgba(0,0,0,0.6) url('https://i.pinimg.com/736x/14/c4/55/14c4553dc9b57b069d63553ec1b3cd6d.jpg') center center fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.container{
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container h1{
+    background: linear-gradient(orange,white,green);
+    font-weight: 700;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+
+.navbar ul li a{
+    padding: 9px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: 1s;
+}
+
+.navbar ul li a:hover{
+    background-color: rgb(36,131,4);
+}
+
+.content{
+    position: absolute;
+    color: #fff;
+    margin-top: 8%;
+    margin-left: 35%;
+}
+
+.content h1{
+    font-size: 50px;
+    margin-bottom: 5%;
+}
+
+.content span{
+    color: orange;
+}
+
+.content a{
+    margin-left: 30px;
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    background-color: green
+}
+
+.content .menu-color{
+    background-color: orange;
+    padding: 15px;
+}
+
+.spinner{
+    margin-left: 20%;
+    margin-top: 9%;
+    width: 150px;
+    height: 150px;
+    animation: Morph 1s infinite;
+}
+
+@keyframes Morph{
+    0%,
+    100% {
+        border-radius: 50%;
+        transform: rotate(0deg);
+        background-color: orange;
+    }
+    50%{
+        border-radius: 0%;
+        transform: rotate(100deg);
+        background-color: green;
+    }
+}
+
+.content2{
+    flex-basis: 50%;
+    position: absolute;
+    left: 20%;
+    top: 65%;
+}
+
+.content2 h5{
+    color: greenyellow;
+    font-size: 25px;
+}
+
+.content2 p{
+    color: #fff;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.img{
+    width: 200px;
+    height: 220px;
+    display: inline-block;
+    border-radius: 15px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 1s;
+}
+
+.img1{
+    background-image: url('https://id.pinterest.com/pin/624522673371861103/');
+}
+
+.img2{
+    background-image: url('https://id.pinterest.com/pin/142918988170415456/');
+}
+
+.img3{
+    background-image: url('https://id.pinterest.com/pin/514395588711710668/');
+}
+
+.img:hover{
+    transform: translateX(-8px) translateY(-15px);
+}
